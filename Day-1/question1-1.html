@@ -1,0 +1,31 @@
+<!-- Javascript between script tags -->
+<html>
+  <head>
+    <title>JS Assignment</title>
+    <!-- <script>
+      t the point calling the function, the rest of the page has not been rendered and
+      so the id test is not in existence at that point. So script will not change anything.
+      document.getElementById("test").innerHTML = "Goodbye World";
+
+      Ideally a javaScript function is placed in the <head> section of an HTML page.
+      The function is invoked (called) when a button is clicked.
+    </script> -->
+  </head>
+  <body>
+    <!-- <script>
+      At the point calling the function, the rest of the page has not been rendered and
+      so the id test is not in existence at that point. So script will not change anything.
+      document.getElementById("test").innerHTML = "Goodbye World";
+      We can achive this with
+      window.onload = function () {document.getElementById("test").innerHTML = "Goodbye World";}
+    </script> -->
+
+    <h1 id="test">Hello World!</h1>
+
+    <script>
+      // This script will execute and change 'Hello World!' to 'Goodbye World',
+      // because at the time when this script execute html is already rendered and script will able to find id test.
+      document.getElementById("test").innerHTML = "Goodbye World";
+    </script>
+  </body>
+</html>
