@@ -3,7 +3,7 @@ import Todo from "./components/Todo";
 
 function App() {
   return (
-    <div className="todo-app">
+    <div className="todo-app flex">
      <Todo />
     </div>
   );
