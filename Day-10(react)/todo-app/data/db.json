@@ -1,0 +1,24 @@
+{
+  "todos": [
+    {
+      "id": 1,
+      "text": "First Todo",
+      "status": false
+    },
+    {
+      "id": 2,
+      "text": "Second Todo",
+      "status": true
+    },
+    {
+      "id": 3,
+      "text": "Third Todo",
+      "status": false
+    },
+    {
+      "id": 4,
+      "text": "Fourth Todo",
+      "status": false
+    }
+  ]
+}
