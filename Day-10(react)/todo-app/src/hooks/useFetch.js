@@ -1,16 +1,16 @@
 import { useEffect, useState } from "react";
-import getTodos from "../services/getTodos";
+import { request } from "../services/axios";
 
-const useFetch = () => {
-  const [data, setData] = useState([]);
+const useFetch = (url, data, method) => {
+  const [response, setResponse] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState("");
 
   useEffect(() => {
     const fetch = async () => {
       try {
-        const todos = await getTodos();
-        setData(todos);
+        const todos = await request(url, data, "get");
+        setResponse(todos);
         setIsLoading(false);
         setError(null);
       } catch (error) {
@@ -20,9 +20,9 @@ const useFetch = () => {
     };
 
     fetch();
-  }, []);
+  }, [url, data, method]);
 
-  return { data, isLoading, error };
+  return { data:response, isLoading, error };
 };
 
 export default useFetch;

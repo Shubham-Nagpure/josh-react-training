@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const TodoList = ({ todos, completeTodo, deleteTodo }) => {
   const pendingTodos = todos.filter((ele) => !ele.status);
   const completedTodos = todos.filter((ele) => ele.status);
@@ -13,7 +15,9 @@ const TodoList = ({ todos, completeTodo, deleteTodo }) => {
 
           {pendingTodos.map((todo) => (
             <div className="list-item" key={todo.id}>
-              <div className="title">{todo.text}</div>
+              <Link to={`/todos/${todo.id}`}>
+                <div className="title">{todo.text}</div>
+              </Link>
               <div className="action-button">
                 <button
                   type="submit"
@@ -44,9 +48,11 @@ const TodoList = ({ todos, completeTodo, deleteTodo }) => {
 
           {completedTodos &&
             completedTodos.map((completedTodo) => (
-              <div className="list-item" key={completedTodo.id}>
-                <div className="title">{completedTodo.text}</div>
-              </div>
+              <Link to={`/todos/${completedTodo.id}`}>
+                <div className="list-item" key={completedTodo.id}>
+                  <div className="title">{completedTodo.text}</div>
+                </div>
+              </Link>
             ))}
         </div>
       </div>
