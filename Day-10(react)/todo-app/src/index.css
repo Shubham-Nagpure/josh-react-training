@@ -6,9 +6,3 @@
   box-sizing: border-box;
   font-family: "Quicksand", sans-serif;
 }
-
-#root {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}

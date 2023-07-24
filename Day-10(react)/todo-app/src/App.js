@@ -1,12 +1,10 @@
 import "./App.css";
-import Todo from "./components/Todo";
+import { Route, Router, RouterProvider } from "react-router-dom";
+import router from "./Routes/router";
+import Navbar from "./components/Navbar";
 
 function App() {
-  return (
-    <div className="todo-app flex">
-     <Todo />
-    </div>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;

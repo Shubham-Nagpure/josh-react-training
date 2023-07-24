@@ -1,17 +1,13 @@
 import React, { useEffect, useState } from "react";
-import TodoForm from "./TodoForm";
 import TodoList from "./TodoList";
-import useFetch from "../hooks/useFetch";
+import Navbar from "./Navbar";
 import { toast } from "react-toastify";
+import { TODOS_LIST_URL } from "../Routes/constant";
+import useFetch from "../hooks/useFetch"
 
 const Todo = () => {
-  const { data, isLoading, error } = useFetch();
-
+  const { data, isLoading, error } = useFetch(TODOS_LIST_URL);
   const [todos, setTodos] = useState([]);
-
-  const addTodo = (todo) => {
-    setTodos([todo, ...todos]);
-  };
 
   const completeTodo = (id) => {
     const updatedTodos = todos.map((todo) => {
@@ -36,11 +32,8 @@ const Todo = () => {
 
   return (
     <>
-      <div className="main-title">
-        <b>TODO's</b>
-      </div>
-      <TodoForm onSubmitHandler={addTodo} />
-      <hr />
+    <Navbar />
+    <div className="flex">
       {isLoading ? (
         <div className="flex">
           <div className="spinner" />
@@ -55,6 +48,7 @@ const Todo = () => {
           deleteTodo={deleteTodo}
         />
       )}
+    </div>
     </>
   );
 };

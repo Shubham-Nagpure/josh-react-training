@@ -5,16 +5,21 @@
   flex-direction: column;
 }
 
+.todo {
+  margin-top: 40px;
+}
+
 .todo-app {
+  margin: auto;
   margin-top: 50px;
-  background-color: beige;
-  padding: 40px;
+  width: 40%;
 }
 
 .title {
   font-size: 14px;
   font-weight: 500;
 }
+
 .main-title {
   font-size: 20px;
   font-weight: 500;
@@ -34,8 +39,13 @@ button {
   flex-direction: row;
   justify-content: space-between;
   padding: 5px 10px;
+  margin: 5px;
   align-items: center;
   height: 60px;
+}
+
+.list-item:hover {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 input {
@@ -92,4 +102,36 @@ hr {
   100% {
     rotate: 360deg;
   }
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: row wrap;
+  padding: 10px 30px;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 5px 100px 0px;
+}
+
+.navbar h2 {
+  flex: 1 1 70%;
+  padding-left: 10%;
+}
+
+.navbar .actions {
+  flex: 1 1 30%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.form-actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  width: 100%;
 }
