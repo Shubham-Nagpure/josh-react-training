@@ -17,6 +17,9 @@ const TodoList = ({ todos, completeTodo, deleteTodo }) => {
             <div className="list-item" key={todo.id}>
               <Link to={`/todos/${todo.id}`}>
                 <div className="title">{todo.text}</div>
+                <div className="dueDate">
+                  {todo.dueDate}
+                </div>
               </Link>
               <div className="action-button">
                 <button
