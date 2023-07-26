@@ -3,21 +3,37 @@
     {
       "id": 1,
       "text": "First Todo",
+      "dueDate": "2023-08-20",
       "status": false
     },
     {
       "id": 2,
       "text": "Second Todo",
+      "dueDate": "2023-08-20",
       "status": true
     },
     {
       "id": 3,
       "text": "Third Todo",
+      "dueDate": "2023-08-20",
       "status": false
     },
     {
       "id": 4,
       "text": "Fourth Todo",
+      "dueDate": "2023-08-20",
+      "status": false
+    },
+    {
+      "id": 0.3018050436603765,
+      "text": "With Due Date",
+      "dueDate": "2023-07-28",
+      "status": false
+    },
+    {
+      "id": 0.07506390442710376,
+      "text": "test",
+      "dueDate": "2023-07-28",
       "status": false
     }
   ]

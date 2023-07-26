@@ -14,6 +14,7 @@ const TodoDetail = () => {
         <div className="todo-details">
           <div className="title"> TODO DETAILS : {data.id}</div>
           <div className="title"> DETAILS : {data.text}</div>
+          <div className="title"> DETAILS : {data.dueDate}</div>
           <div className="title"> Status : {data.status ? "Completed" : "InProgress"} </div>
         </div>
       </div>

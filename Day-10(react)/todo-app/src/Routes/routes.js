@@ -9,6 +9,7 @@ import {
   TODOS_DETAILS_URL,
   TODOS_LIST_URL,
 } from "./constant";
+import NotFound from "../components/NotFound";
 
 const routes = [
   {
@@ -27,6 +28,10 @@ const routes = [
     path: TODOS_DETAILS_URL,
     element: <TodoDetail />,
   },
+  {
+    path: "*",
+    element: <NotFound />
+  }
 ];
 
 export default routes;
